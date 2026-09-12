@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="محل سمير حداد لخدمات الإعلام الآلي بعين سلطان، سوق أهراس">
+  <meta name="description" content="محل سمير حداد لخدمات الإعلام الآلي والخدمات الرقمية والطباعة والنسخ في عين سلطان، ولاية سوق أهراس">
   <title>سمير حداد | خدمات الإعلام الآلي</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -323,7 +323,35 @@
       .card, .info-box { padding: 24px; }
       section { padding: 65px 0; }
     }
+  
+    .service-card-link{display:inline-flex;align-items:center;gap:7px;margin-top:15px;color:var(--cyan);text-decoration:none;font-weight:800;font-size:.92rem}
+    .service-card-link:hover{text-decoration:underline}
+    .digital-services{margin-top:28px;display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .digital-link{display:block;text-decoration:none;color:inherit;position:relative}
+    .digital-link .card{min-height:205px}
+    .contact-actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:18px}
+    .map-frame{width:100%;min-height:320px;border:0;border-radius:22px;margin-top:22px;background:rgba(255,255,255,.04)}
+    .visitor-fab{position:fixed;left:18px;bottom:18px;z-index:100;border:1px solid rgba(255,255,255,.16);background:linear-gradient(135deg,rgba(0,229,255,.94),rgba(79,124,255,.94),rgba(168,85,247,.94));color:white;padding:13px 18px;border-radius:999px;font:inherit;font-weight:800;cursor:pointer;box-shadow:0 18px 45px rgba(0,0,0,.35),0 0 24px rgba(0,229,255,.18);animation:pulse 4s infinite}
+    .visitor-modal{position:fixed;inset:0;z-index:120;display:none;align-items:center;justify-content:center;padding:22px;background:rgba(2,8,18,.72);backdrop-filter:blur(9px)}
+    .visitor-modal.show{display:flex}
+    .visitor-box{width:min(560px,94vw);padding:28px;border-radius:28px;border:1px solid var(--border);background:linear-gradient(145deg,rgba(14,32,55,.98),rgba(7,17,31,.98));box-shadow:0 30px 90px rgba(0,0,0,.52);position:relative;overflow:hidden}
+    .visitor-close{position:absolute;left:15px;top:15px;width:38px;height:38px;border:1px solid var(--border);background:rgba(255,255,255,.05);color:white;border-radius:12px;cursor:pointer;font-size:1.1rem}
+    .visitor-stats{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px}
+    .visitor-stat{padding:22px 15px;border-radius:20px;border:1px solid var(--border);background:rgba(255,255,255,.04);text-align:center}
+    .visitor-stat .num{display:block;margin-top:8px;font-size:2rem;font-weight:900;color:var(--cyan)}
+    .visitor-note{margin:18px 0 0;color:var(--muted);line-height:1.9;font-size:.9rem}
+    .visitor-widget-slot{min-height:42px;display:grid;place-items:center;margin-top:15px}
+    .setup-hint{color:#ffd38a;background:rgba(255,179,0,.08);border:1px solid rgba(255,179,0,.18);padding:12px 14px;border-radius:14px;line-height:1.8;font-size:.86rem}
+    @media (max-width:700px){.digital-services{grid-template-columns:1fr}.visitor-stats{grid-template-columns:1fr}.visitor-fab{left:12px;bottom:12px}}
+
   </style>
+  <!-- الخدمات الرسمية:
+       فضاء الأولياء: https://tharwa.education.gov.dz/
+       DZaïr Digital Services: https://dzds.dz/
+       وزارة العدل: https://portail.mjustice.dz/
+       EDAHABIA: https://eccp.poste.dz/commande-edahabia
+       CNAS / الهناء: https://elhanaa.cnas.dz/
+  -->
 </head>
 
 <body>
@@ -375,41 +403,33 @@
         </div>
 
         <div class="grid">
-          <article class="card">
-            <div class="icon">🛠️</div>
-            <h3>صيانة الحواسيب</h3>
-            <p>تشخيص وإصلاح أعطال الحواسيب، تثبيت البرامج، تهيئة الأجهزة وتحسين الأداء.</p>
-          </article>
+          <article class="card"><div class="icon">🛠️</div><h3>صيانة الحواسيب</h3><p>تشخيص وإصلاح الأعطال، تثبيت البرامج، تهيئة الأجهزة وتحسين الأداء.</p></article>
+          <article class="card"><div class="icon">🖨️</div><h3>الطباعة والنسخ</h3><p>طباعة ونسخ الوثائق والملفات بجودة عالية، مع خدمات التصوير والمسح الضوئي.</p></article>
+          <article class="card"><div class="icon">💾</div><h3>لوازم الإعلام الآلي</h3><p>بيع مستلزمات الحواسيب والإكسسوارات والملحقات واللوازم الرقمية.</p></article>
+          <article class="card"><div class="icon">📱</div><h3>الهواتف النقالة</h3><p>بيع الهواتف النقالة ولوازمها وإكسسواراتها وخدمات المرافقة الرقمية.</p></article>
+          <article class="card"><div class="icon">🌐</div><h3>التسجيل في المنصات الرقمية</h3><p>إنشاء الحسابات والمساعدة في التسجيل ومتابعة الإجراءات على المنصات الرسمية.</p></article>
+          <article class="card"><div class="icon">🎓</div><h3>البحوث المدرسية والجامعية</h3><p>إنجاز وتنسيق البحوث والملفات والعروض المدرسية والجامعية.</p></article>
+        </div>
 
-          <article class="card">
-            <div class="icon">🖨️</div>
-            <h3>الطباعة والنسخ</h3>
-            <p>خدمات الطباعة والنسخ والوثائق بجودة عالية وسرعة في الإنجاز.</p>
-          </article>
+        <div class="section-title" style="margin-top:58px;margin-bottom:30px">
+          <span>الخدمات الرقمية</span>
+          <h2>إنجاز ومرافقة أهم الخدمات الإلكترونية</h2>
+          <p>روابط مباشرة للخدمات والمنصات الرسمية، مع المساعدة على التسجيل والاستعمال.</p>
+        </div>
 
-          <article class="card">
-            <div class="icon">💾</div>
-            <h3>لوازم الإعلام الآلي</h3>
-            <p>بيع مختلف مستلزمات الحواسيب والإكسسوارات واللوازم المكتبية الرقمية.</p>
-          </article>
+        <div class="digital-services">
+          <a class="digital-link" href="https://tharwa.education.gov.dz/" target="_blank" rel="noopener"><article class="card"><div class="icon">👨‍👩‍👧</div><h3>فضاء الأولياء</h3><p>المساعدة في إنشاء الحساب ومتابعة النتائج والغيابات وطلبات التسجيل والتحويل.</p><span class="service-card-link">فتح فضاء الأولياء ↗</span></article></a>
+          <a class="digital-link" href="https://dzds.dz/" target="_blank" rel="noopener"><article class="card"><div class="icon">🇩🇿</div><h3>DZaïr Digital Services</h3><p>البوابة الوطنية الموحدة للخدمات الرقمية الحكومية للوصول إلى خدمات متعددة من منصة واحدة.</p><span class="service-card-link">فتح البوابة الرسمية ↗</span></article></a>
+          <a class="digital-link" href="https://portail.mjustice.dz/" target="_blank" rel="noopener"><article class="card"><div class="icon">⚖️</div><h3>شهادة السوابق العدلية</h3><p>المساعدة في طلب واستخراج القسيمة رقم 03 إلكترونياً عبر بوابة وزارة العدل.</p><span class="service-card-link">بوابة وزارة العدل ↗</span></article></a>
+          <a class="digital-link" href="https://eccp.poste.dz/commande-edahabia" target="_blank" rel="noopener"><article class="card"><div class="icon">💳</div><h3>البطاقة الذهبية EDAHABIA</h3><p>المساعدة في إجراءات طلب البطاقة الذهبية ومختلف خدمات بريد الجزائر الرقمية.</p><span class="service-card-link">طلب البطاقة ↗</span></article></a>
+          <a class="digital-link" href="https://elhanaa.cnas.dz/" target="_blank" rel="noopener"><article class="card"><div class="icon">🩺</div><h3>بطاقة الشفاء وخدمات CNAS</h3><p>المساعدة في خدمات فضاء الهناء، شهادة الانتساب، والخدمات المتعلقة ببطاقة الشفاء.</p><span class="service-card-link">فتح فضاء الهناء ↗</span></article></a>
+          <a class="digital-link" href="https://www.poste.dz/" target="_blank" rel="noopener"><article class="card"><div class="icon">📮</div><h3>خدمات بريد الجزائر</h3><p>المساعدة في E-CCP وEDAHABIA والخدمات البريدية الرقمية المتاحة عبر الإنترنت.</p><span class="service-card-link">موقع بريد الجزائر ↗</span></article></a>
+        </div>
 
-          <article class="card">
-            <div class="icon">📱</div>
-            <h3>الهواتف النقالة</h3>
-            <p>بيع الهواتف النقالة ولوازمها وإكسسواراتها حسب احتياجات الزبائن.</p>
-          </article>
-
-          <article class="card">
-            <div class="icon">🌐</div>
-            <h3>التسجيل في المنصات الرقمية</h3>
-            <p>المساعدة في إنشاء الحسابات والتسجيل في مختلف المنصات والخدمات الرقمية.</p>
-          </article>
-
-          <article class="card">
-            <div class="icon">🎓</div>
-            <h3>البحوث المدرسية والجامعية</h3>
-            <p>إنجاز وتنسيق البحوث والملفات والعروض المدرسية والجامعية باحترافية.</p>
-          </article>
+        <div class="cta" style="margin-top:28px">
+          <h3 style="margin-top:0;font-size:1.35rem">خدمات رقمية أخرى</h3>
+          <p style="color:var(--muted);line-height:2;margin-bottom:0">كما نوفر المساعدة في مختلف الخدمات الرقمية الرسمية المتاحة عبر الإنترنت، حسب المنصة والقطاع والإجراء المطلوب، مع احترام شروط ومتطلبات كل خدمة.</p>
+        </div>
         </div>
       </div>
     </section>
@@ -424,30 +444,28 @@
         <div class="about">
           <div class="info-box">
             <h2>محل سمير حداد لخدمات الإعلام الآلي</h2>
-            <p style="color:var(--muted); line-height:2">
-              نوفر مجموعة متنوعة من الخدمات التقنية والرقمية لتلبية احتياجات
-              سكان المنطقة والطلبة وأصحاب الأعمال، مع التركيز على السرعة،
-              الدقة وحسن التعامل.
-            </p>
-
+            <p style="color:var(--muted); line-height:2">محل متخصص في الإعلام الآلي والخدمات الرقمية، مع توفير الطباعة والنسخ، صيانة الحواسيب، بيع اللوازم والهواتف، والمساعدة في الخدمات الإلكترونية والتعليمية والإدارية عبر الإنترنت.</p>
             <div class="info-list">
               <div class="info-item">👤 <span>صاحب المحل: <b>سمير حداد</b></span></div>
-              <div class="info-item">📍 <span>العنوان: <b>بلدية عين سلطان، ولاية سوق أهراس، الجزائر</b></span></div>
+              <div class="info-item">📍 <span>العنوان الدقيق: <b>Haddad, 59HC+Q6X, N81, Aïn Soltane, سوق أهراس</b></span></div>
+              <div class="info-item">☎️ <span>الهاتف: <b dir="ltr">039 658 019</b></span></div>
+              <div class="info-item">✉️ <span>البريد الإلكتروني: <b>haddad.samir2010@gmail.com</b></span></div>
               <div class="info-item">💻 <span>التخصص: <b>الإعلام الآلي والخدمات الرقمية</b></span></div>
+            </div>
+            <div class="contact-actions">
+              <a class="btn btn-main" href="tel:039658019">☎️ اتصال مباشر</a>
+              <a class="btn btn-alt" href="mailto:haddad.samir2010@gmail.com">✉️ إرسال بريد</a>
             </div>
           </div>
 
           <div class="info-box contact-card" id="contact">
             <div class="big-icon">📍</div>
-            <h2>زورونا في المحل</h2>
-            <p style="color:var(--muted); line-height:1.9">
-              عين سلطان – ولاية سوق أهراس
-            </p>
+            <h2>موقع المحل بدقة</h2>
+            <p style="color:var(--muted); line-height:1.9">Plus Code: <b style="color:#fff">59HC+Q6X</b><br>N81 – Aïn Soltane – Souk Ahras</p>
             <div class="buttons">
-              <a class="btn btn-main" href="https://www.google.com/maps/search/?api=1&query=Ain+Soltane%2C+Souk+Ahras%2C+Algeria" target="_blank" rel="noopener">
-                📍 فتح الموقع على الخريطة
-              </a>
+              <a class="btn btn-main" href="https://maps.app.goo.gl/uUCVwhFrpV2oPg586" target="_blank" rel="noopener">📍 فتح الموقع بدقة على Google Maps</a>
             </div>
+            <iframe class="map-frame" title="موقع محل سمير حداد" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=59HC%2BQ6X%2C%20N81%2C%20A%C3%AFn%20Soltane%2C%20Souk%20Ahras%2C%20Algeria&output=embed"></iframe>
           </div>
         </div>
       </div>
@@ -466,6 +484,22 @@
     </section>
   </main>
 
+
+  <button class="visitor-fab" id="visitorFab" type="button">👁️ إحصائيات الزوار</button>
+  <div class="visitor-modal" id="visitorModal" aria-hidden="true">
+    <div class="visitor-box" role="dialog" aria-modal="true" aria-labelledby="visitorTitle">
+      <button class="visitor-close" id="visitorClose" type="button" aria-label="إغلاق">✕</button>
+      <h2 id="visitorTitle" style="margin-top:0">📊 زوار الموقع</h2>
+      <p style="color:var(--muted);line-height:1.9">عرض عدد الزوار الحاليين وإجمالي الزيارات بواسطة عداد خارجي مجاني.</p>
+      <div class="visitor-stats">
+        <div class="visitor-stat">🟢 الزوار الآن<span class="num" id="onlineVisitors">—</span><div id="onlineWidget" class="visitor-widget-slot"></div></div>
+        <div class="visitor-stat">👥 إجمالي الزوار<span class="num" id="totalVisitors">—</span><div id="totalWidget" class="visitor-widget-slot"></div></div>
+      </div>
+      <div class="setup-hint" id="visitorSetupHint"><b>إعداد العداد لأول مرة:</b> أنشئ عدادًا مجانيًا في FeedPulse لموقعك ثم ضع <code>site_id</code> الذي يعطيه لك الموقع داخل الكود مكان <code>YOUR_SITE_ID</code>.</div>
+      <p class="visitor-note">يحتاج العداد إلى خدمة خارجية لأن GitHub Pages استضافة ثابتة ولا تحتوي قاعدة بيانات خاصة بعدّاد الزوار.</p>
+    </div>
+  </div>
+
   <footer>
     <div class="container">
       © <span id="year"></span> سمير حداد — جميع الحقوق محفوظة
@@ -475,7 +509,6 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // تأثير خفيف لتغيير ألوان الإضاءة الخلفية بشكل دوري
     const root = document.documentElement;
     const colors = [
       ["#00e5ff", "#a855f7", "#ff3cac"],
@@ -489,6 +522,44 @@
       root.style.setProperty("--purple", colors[i][1]);
       root.style.setProperty("--pink", colors[i][2]);
     }, 4500);
+
+    const visitorFab = document.getElementById("visitorFab");
+    const visitorModal = document.getElementById("visitorModal");
+    const visitorClose = document.getElementById("visitorClose");
+    const siteId = "YOUR_SITE_ID"; // ضع site_id من FeedPulse هنا
+
+    const openVisitorModal = () => {
+      visitorModal.classList.add("show");
+      visitorModal.setAttribute("aria-hidden", "false");
+    };
+    const closeVisitorModal = () => {
+      visitorModal.classList.remove("show");
+      visitorModal.setAttribute("aria-hidden", "true");
+    };
+
+    visitorFab.addEventListener("click", openVisitorModal);
+    visitorClose.addEventListener("click", closeVisitorModal);
+    visitorModal.addEventListener("click", (e) => {
+      if (e.target === visitorModal) closeVisitorModal();
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeVisitorModal();
+    });
+
+    // عدادات حقيقية بعد وضع site_id من FeedPulse.
+    if (siteId !== "YOUR_SITE_ID") {
+      document.getElementById("visitorSetupHint").style.display = "none";
+
+      const totalScript = document.createElement("script");
+      totalScript.async = true;
+      totalScript.src = "https://feed-pulse.com/api/embed/hit_counter?site_id=" + encodeURIComponent(siteId) + "&show=total&theme=dark";
+      document.getElementById("totalWidget").appendChild(totalScript);
+
+      const liveScript = document.createElement("script");
+      liveScript.async = true;
+      liveScript.src = "https://feed-pulse.com/api/embed/traffic-feed.js?site_id=" + encodeURIComponent(siteId) + "&w=320";
+      document.getElementById("onlineWidget").appendChild(liveScript);
+    }
   </script>
 </body>
 </html>
